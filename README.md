@@ -1,4 +1,4 @@
 # fuzzy-happiness
-A birthday treat for a soecial someone :)
+A birthday treat for a special someone :)
 
 Should update soon :)
