@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bubble Wrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        img {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <script>
+        var popSound = document.createElement("audio");
+        popSound.src = "http://bit.ly/AX202_PopSound";
+
+        function pop() {
+            if (event.target.src != "http://bit.ly/AX202_Pop") {
+                popSound.play();
+            }
+            event.target.src = "http://bit.ly/AX202_Pop";
+        }
+
+        for (var i = 0; i < 1000; i++) {
+            var bubble = document.createElement("img");
+            bubble.src = "http://bit.ly/AX202_UnPop";
+            bubble.onclick = pop;
+            document.getElementById("container").appendChild(bubble);
+        }
+    </script>
+</body>
+
+</html>

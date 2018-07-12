@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guitar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div#lutemain1 {
+            vertical-align: middle;
+            margin-top: -50px;
+        }
+
+        div#lutelines {
+            display: inline-block;
+            height: 100%;
+            cursor: pointer;
+            margin-top: 100px;
+        }
+
+        div#vline1 {
+            /* Each string is one div tag */
+            width: 6px;
+            /* string width */
+            background-color: #ffc023;
+            /* string color */
+            height: 100%;
+            /* Override in-line if you want specific height. */
+            float: left;
+            margin-left: 30px;
+        }
+
+        div#vline2 {
+            width: 6px;
+            background-color: #ffc023;
+            height: 100%;
+            float: left;
+            margin-left: 30px;
+        }
+
+        div#vline3 {
+
+            width: 6px;
+            background-color: #ffc023;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+            margin-left: 30px;
+        }
+
+        div#vline4 {
+            width: 6px;
+            background-color: #ffc023;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+            margin-left: 30px;
+        }
+
+        div#vline5 {
+            width: 6px;
+            background-color: #ffc023;
+            height: 100%;
+            float: left;
+            margin-left: 30px;
+            cursor: pointer;
+            margin-right: 30px;
+        }
+
+        div#vline1:hover {
+            background-color: #803d1d
+        }
+
+        div#vline2:hover {
+            background-color: #803d1d
+        }
+
+        div#vline3:hover {
+            background-color: #803d1d
+        }
+
+        div#vline4:hover {
+            background-color: #803d1d
+        }
+
+        div#vline5:hover {
+            background-color: #803d1d
+        }
+
+        div#lutecircle {
+            width: 280px;
+            height: 280px;
+            background: #000000;
+            border: 8px solid #ffc023;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            margin-top: -530px;
+        }
+    </style>
+    <script>
+        function play(mp3_file) {
+            var audio = new Audio(mp3_file);
+            audio.play();
+        }
+    </script>
+</head>
+
+<body>
+    <div align=center>
+        <h1>Hover over the guitar strings:)</h1>
+
+        <div id="lutemain1" align="center">
+            <div id="lutelines" align="center">
+
+                <div id="vline1" align="center" onmouseenter="play('https://raw.githubusercontent.com/212mr/m15final/master/music/lute01.mp3')"
+                    style="height:700px;"></div>
+
+                <div id="vline2" align="center" onmouseenter="play('https://raw.githubusercontent.com/212mr/m15final/master/music/lute02.mp3')"
+                    style="height:700px;"></div>
+
+                <div id="vline3" align="center" onmouseenter="play('https://raw.githubusercontent.com/212mr/m15final/master/music/lute03.mp3')"
+                    style="height:700px;"></div>
+
+                <div id="vline4" align="center" onmouseenter="play('https://raw.githubusercontent.com/212mr/m15final/master/music/lute04.mp3')"
+                    style="height:700px;"></div>
+
+                <div id="vline5" align="center" onmouseenter="play('https://raw.githubusercontent.com/212mr/m15final/master/music/lute05.mp3')"
+                    style="height:700px;"></div>
+            </div>
+            <div id="lutecircle" align="center"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
