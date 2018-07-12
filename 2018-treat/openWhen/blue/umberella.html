@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Umbrella</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+        body {
+            background-color: #92d1ce;
+            font-family: 'Luckiest Guy', cursive;
+            
+        }
+
+        .umbrella-container {
+            position: absolute;
+            top: 15em;
+            left: 50em;
+        }
+
+        .umbrella-contain-top {
+            position: relative;
+            margin: auto;
+            margin-top: 50px;
+            width: 300px;
+        }
+
+        .umbrella {
+            position: absolute;
+            z-index: 5;
+            border-radius: 50%;
+            background-color: #f26e46;
+            width: 300px;
+            height: 300px;
+        }
+
+        .pole {
+            position: absolute;
+            top: -15px;
+            left: 144px;
+            z-index: 3;
+            background-color: #3d3d3e;
+            border-radius: 70px;
+            width: 10px;
+            height: 400px;
+        }
+
+        .arch {
+            position: absolute;
+            top: 150px;
+            z-index: 5;
+            border-radius: 50%;
+            background-color: #92d1ce;
+            width: 80px;
+            height: 80px;
+        }
+
+        .arch-2 {
+            top: 0;
+            left: 75px;
+        }
+
+        .arch-3 {
+            top: 0;
+            left: 145px;
+        }
+
+        .arch-4 {
+            top: 0;
+            left: 220px;
+        }
+
+        .eliminate-bottom {
+            position: absolute;
+            top: 200px;
+            z-index: 6;
+            background-color: #92d1ce;
+            width: 300px;
+            height: 100px;
+        }
+
+        .contain-umbrella-bottom {
+            position: relative;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+        }
+
+        .pole-2 {
+            top: 161px;
+            z-index: 20;
+            height: 160px;
+        }
+
+        .pole-2:before {
+            position: absolute;
+            top: -4px;
+            left: -5px;
+            width: 0;
+            height: 0;
+            border-left: 10px dotted transparent;
+            border-right: 10px dotted transparent;
+            border-top: 20px solid #f26e46;
+            display: block;
+            content: '';
+        }
+
+        .handle {
+            position: absolute;
+            top: 345px;
+            left: 141px;
+            z-index: 50;
+            background-color: #3d3d3e;
+            border-radius: 50px;
+            width: 16px;
+            height: 50px;
+        }
+
+        svg {
+            font-size: 35px;
+            width: 50%;
+            height: auto;
+            position: absolute;
+            left: 25%;
+        }
+
+        .badge-header,
+        .badge-footer {
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        .badge-footer{
+            font-size: 1.5em;
+            letter-spacing: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg version="1.1" id="elp-badge" class="badge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 289.1 289.1" enable-background="new 0 0 289.1 289.1" xml:space="preserve">
+        <path id="SVGID_x5F_2_x5F_" fill="none" d="M31.1,129c10.4-62.1,69.2-104,131.4-93.6s104,69.2,93.6,131.4
+				c-10.4,62.1-69.2,104-131.4,93.6C62.5,249.9,20.6,191.1,31.1,129z" />
+        <text text-anchor="middle">
+            <textPath xlink:href="#SVGID_x5F_2_x5F_" startOffset="160">
+                <tspan class="badge-header" fill="#000" font-size="35">I've got you</tspan>
+            </textPath>
+        </text>
+
+        <path id="SVGID_x5F_1_x5F_" fill="none" d="M263.9,172.8c11-65.5-33.2-127.6-98.7-138.6S37.5,67.4,26.5,133s33.2,127.6,98.7,138.6
+																							 C190.8,282.6,252.9,238.4,263.9,172.8z" />
+        <text text-anchor="middle">
+            <textPath xlink:href="#SVGID_x5F_1_x5F_" startOffset="580">
+                <tspan class="badge-footer" fill="#000" font-size="35">covered</tspan>
+            </textPath>
+        </text>
+    </svg>
+    <div class="umbrella-container">
+
+        <div class='umbrella-contain-top'>
+            <div class='umbrella'></div>
+            <div class='arch'>
+                <div class='arch arch-2'></div>
+                <div class='arch arch-3'></div>
+                <div class='arch arch-4'></div>
+            </div>
+        </div>
+        <div class='contain-umbrella-bottom'>
+            <div class='pole'></div>
+            <div class='eliminate-bottom'></div>
+            <div class='pole pole-2'></div>
+            <div class='handle'></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
