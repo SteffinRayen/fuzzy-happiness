@@ -3,11 +3,13 @@
 Here are a collection of games that I think will keep you occupied a bit :) or at least keep you less bored. These are some of the retro games that I usually make when I learn a new game, except that I didn't make them this time due to shortage of time. Next year I'll make sure they are original and from me :disappointed:
 
 Click only one per day okay. There aren't many here. Look forward to more next year :)
-- [Building Blocks]()
-- [Never ending Jump]()
-- [Memory Tiles]()
-- [Save the Princess]()
-- [Snake]()
-- [Tetris]()
-- [Tic Tac Toe]()
-- [Tower of Hanoi]()
+- [Building Blocks](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/blocks.html)
+- [Never ending Jump](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/jump.html)
+- [Memory Tiles](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/memory.html)
+- [Save the Princess](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/princess.html)
+- [Snake](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/snake.html)
+- [Tetris](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/tetris.html)
+- [Tic Tac Toe](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/ticTacToe.html)
+- [Tower of Hanoi](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/towerOfHanoi.html)
+
+Go Back to [Home Page](https://steffinrayen.github.io/fuzzy-happiness/)
