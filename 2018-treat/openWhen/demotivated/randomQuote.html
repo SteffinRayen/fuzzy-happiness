@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random Quote Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Amatic SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Amatic SC, Sans-serif;
+        }
+
+        .jumbotron {
+            margin-top: 25px;
+        }
+
+        .text-black {
+            font-weight: bold;
+            color: black;
+        }
+
+        .bg-black {
+            background-color: black;
+        }
+
+        .dashed-border {
+            margin-top: 10px;
+            padding: 30px;
+            outline: 2px dashed white;
+            outline-offset: -10px;
+            -moz-outline-radius: 10px;
+            -webkit-outline-radius: 10px;
+        }
+
+        .btn {
+            margin: 10px;
+        }
+
+        .font-lato {
+            font-family: Lato, Sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Introduction-->
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="h1 text-black col-12">Random Quote Generator</div>
+                <div class="h2 text-black col-12">Enjoy
+                    <i class="fa fa-quote-left"> </i> with
+                    <i class="fa fa-coffee"></i> and
+                    <i class="fa fa-music"></i>.</div>
+            </div>
+            <!--Display-->
+            <div class="row justify-content-center">
+                <div class="jumbotron-fluid dashed-border bg-black text-white col-xs-12 col-sm-8 col-md-7 col-lg-6 col-xl-4">
+                    <h1 class="text-center" id="quote"></h1>
+                    <div class="row justify-content-center">
+
+                        <button class="btn btn-secondary" id="new-quote" type="submit">
+                            <i class="fa fa-quote-left"></i>New Quote</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajaxSetup({
+                cache: false
+            });
+            //store the current quote
+            var currentQuote = " ";
+            //function pull the quote from API
+            var random = function () {
+                $("#quote").empty();
+                $.getJSON(
+                    "https://cors-everywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
+                    function (a) {
+                        $("#quote").append(a[0].content + "<p>— " + a[0].title + "</p>");
+                        currentQuote = $("#quote").text();
+                    }
+                );
+            };
+            //get a new quote
+            $(document).ready(random);
+            $("#new-quote").click(random);
+            //share a quote
+
+        });
+
+    </script>
+</body>
+
+</html>

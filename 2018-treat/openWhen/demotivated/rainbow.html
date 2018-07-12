@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rainbow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotateZ(-180deg);
+                transform: rotateZ(-180deg);
+            }
+            to {
+                -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                -webkit-transform: rotateZ(-180deg);
+                transform: rotateZ(-180deg);
+            }
+            to {
+                -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+            }
+        }
+
+        body {
+            background: #fdfad8;
+        }
+
+        .rainbow {
+            clip: rect(0 700px 350px 0);
+            height: 700px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-25%);
+            transform: translateX(-50%) translateY(-25%);
+            width: 700px;
+        }
+
+        .arc {
+            -webkit-animation: spin ease-in-out 0.5s normal both;
+            animation: spin ease-in-out 0.5s normal both;
+            border-radius: 50%;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+        }
+
+        .arc-red {
+            background: #e31d28;
+            clip: rect(0 700px 350px 0);
+            height: 700px;
+            margin-left: -350px;
+            margin-top: -350px;
+            width: 700px;
+            -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+        }
+
+        .arc-orange {
+            background: #ed8c3d;
+            clip: rect(0 600px 300px 0);
+            height: 600px;
+            margin-left: -300px;
+            margin-top: -300px;
+            width: 600px;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .arc-yellow {
+            background: #fcd234;
+            clip: rect(0 500px 250px 0);
+            height: 500px;
+            margin-left: -250px;
+            margin-top: -250px;
+            width: 500px;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+        }
+
+        .arc-green {
+            background: #3e9965;
+            clip: rect(0 400px 200px 0);
+            height: 400px;
+            margin-left: -200px;
+            margin-top: -200px;
+            width: 400px;
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+
+        .arc-blue {
+            background: #295167;
+            clip: rect(0 300px 150px 0);
+            height: 300px;
+            margin-left: -150px;
+            margin-top: -150px;
+            width: 300px;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+
+        .arc-purple {
+            background: #492245;
+            clip: rect(0 200px 100px 0);
+            height: 200px;
+            margin-left: -100px;
+            margin-top: -100px;
+            width: 200px;
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+
+        .arc-transparent {
+            background: #fdfad8;
+            clip: rect(0 100px 50px 0);
+            height: 100px;
+            margin-left: -50px;
+            margin-top: -50px;
+            width: 100px;
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        .text {
+            position: absolute;
+            top: 10px;
+            left: 10%;
+            width: 80%;
+            text-align: center;
+            font-family: 'Happy Monkey', cursive;
+            font-size: 3.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        Everybody wants <strong>Happiness</strong>, no one wants <strong>Pain</strong>. <br>
+        But you can't make a <strong>Rainbow</strong> without a little <strong>Rain</strong>. 
+    </div>
+    <div class="rainbow">
+        <div class="arc arc-red"></div>
+        <div class="arc arc-orange"></div>
+        <div class="arc arc-yellow"></div>
+        <div class="arc arc-green"></div>
+        <div class="arc arc-blue"></div>
+        <div class="arc arc-purple"></div>
+        <div class="arc arc-transparent"></div>
+    </div>
+</body>
+
+</html>
