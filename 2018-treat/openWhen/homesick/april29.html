@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>April 29th</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+        @import url('https://fonts.googleapis.com/css?family=Play');
+        html {
+            height: 100%;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        body {
+            background: #ff748c;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 300;
+
+            text-align: center;
+            margin-top: 120px;
+
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        p {
+            color: #ffdae0;
+            font-family: 'Play', sans-serif;
+            font-size: 20px;
+            padding: 20px 100px;
+            text-align: center;
+
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .circle {
+            width: 450px;
+            height: 450px;
+            background: #ff8da1;
+            border-radius: 50%;
+
+            margin: 0 auto;
+            transform: translateY(20%);
+
+            position: relative;
+        }
+
+        .cloud {
+            position: relative;
+            width: 200px;
+            height: 110px;
+            margin-left: 150px;
+        }
+
+        .cloud-one {
+            width: 40px;
+            height: 12px;
+            background: #E2EBF2;
+            border-radius: 10px;
+        }
+
+        .cloud-two {
+            width: 100px;
+            height: 20px;
+            background: #E2EBF2;
+            border-radius: 10px;
+
+            margin-top: 15px;
+            margin-left: -60px;
+        }
+
+        .cloud-two:before {
+            width: 50px;
+            height: 18px;
+            background: #E2EBF2;
+            content: "\00a0";
+            border-radius: 10px;
+
+            position: absolute;
+            top: 45px;
+            left: -20px;
+        }
+
+        .cloud-two:after {
+            width: 100px;
+            height: 20px;
+            background: #E2EBF2;
+            content: "\00a0";
+            border-radius: 10px;
+
+            position: absolute;
+            top: 60px;
+            left: -40px;
+        }
+
+        .cloud-three {
+            width: 45px;
+            height: 18px;
+            background: #E2EBF2;
+            border-radius: 10px;
+
+            margin-left: 70px;
+        }
+
+        .cloud-four {
+            width: 35px;
+            height: 12px;
+            background: #E2EBF2;
+            border-radius: 5px;
+
+            margin-left: -60px;
+            margin-top: 30px;
+        }
+
+        .cloud.two {
+            margin-top: -50px;
+            margin-left: 350px;
+        }
+
+        .cloud.two .cloud-one {
+            width: 30px;
+            height: 10px;
+        }
+
+        .cloud.two .cloud-two {
+            width: 80px;
+            height: 15px;
+
+            margin-left: -50px;
+        }
+
+        .cloud.two .cloud-two:before {
+            width: 30px;
+            height: 12px;
+
+            margin-top: -7px;
+            margin-left: 10px;
+        }
+
+        .cloud.two .cloud-two:after {
+            width: 80px;
+            height: 15px;
+
+            margin-left: 5px;
+            margin-top: -12px;
+        }
+
+        .cloud.two .cloud-three {
+            width: 35px;
+            height: 15px;
+
+            margin-left: 50px;
+        }
+
+        .cloud.two .cloud-four {
+            width: 30px;
+            height: 10px;
+
+            margin-top: 25px;
+            margin-left: -50px;
+        }
+
+        .cupid {
+            position: relative;
+            left: 200px;
+            top: -25px;
+        }
+
+        .face {
+            width: 60px;
+            height: 85px;
+            border-radius: 30px;
+            background: #F1C9C2;
+            z-index: 1000;
+            box-shadow: 4px 0px 0px #DAAFA6;
+        }
+
+        .eye {
+            width: 7px;
+            height: 7px;
+            background: #6E514B;
+            border-radius: 5px;
+
+            transform: translateY(35px) translateX(10px);
+        }
+
+        .eye:after {
+            width: 7px;
+            height: 7px;
+            background: #6E514B;
+            border-radius: 5px;
+
+            position: absolute;
+            content: "\00a0";
+            left: 22px;
+        }
+
+        .nose {
+            width: 5px;
+            height: 16px;
+            background: #E69081;
+            border-radius: 10px;
+
+            transform: translateY(32px) translateX(21px);
+        }
+
+        .cheek {
+            width: 12px;
+            height: 6px;
+            border-radius: 15px;
+            background: #F3ADA6;
+
+            transform: translateY(23px) translateX(3px);
+        }
+
+        .cheek:after {
+            width: 12px;
+            height: 6px;
+            border-radius: 15px;
+            background: #F3ADA6;
+
+            position: absolute;
+            content: "\00a0";
+            left: 30px;
+        }
+
+        .teeth {
+            width: 24px;
+            height: 5px;
+            background: #D9EEE9;
+
+            z-index: 1;
+
+            transform: translateY(30px) translateX(13px);
+        }
+
+        .mouth {
+            width: 24px;
+            height: 10px;
+            background: #6B4F4B;
+            border-radius: 0px 0px 50px 50px;
+            z-index: 0;
+
+            margin-top: 27px;
+            margin-left: 13px;
+        }
+
+        .heaven-ring {
+            width: 40px;
+            height: 11px;
+            border: 3px solid #D8956B;
+            border-radius: 100px / 40px;
+
+            margin-left: 8px;
+            margin-bottom: 7px;
+        }
+
+        .cupid-body {
+            width: 130px;
+            height: 130px;
+            background: #D79893;
+            border-radius: 50%;
+            z-index: -1;
+            position: absolute;
+            top: 70px;
+            left: -5px;
+            overflow: hidden;
+        }
+
+        .shirt {
+            width: 100%;
+            height: 80px;
+            background: #ECE4E2;
+
+            position: absolute;
+            top: 52px;
+            overflow: hidden;
+        }
+
+        .shirt-shadow {
+            width: 130px;
+            height: 130px;
+            background: #ECE4E2;
+            border-radius: 50%;
+            box-shadow: 50px 0px #CDC3C2;
+            position: absolute;
+            left: -25px;
+            top: -70px;
+            transform: rotate(50deg);
+        }
+
+        .shirt-line {
+            width: 20px;
+            height: 55px;
+            background: #ECE4E2;
+
+            position: absolute;
+            left: 75px;
+            top: 0px;
+        }
+
+        .arm-left {
+            width: 15px;
+            height: 50px;
+            background: #AA6A69;
+            border-radius: 20px;
+
+            z-index: -2;
+            position: absolute;
+            left: -15px;
+
+            transform: rotate(50deg);
+        }
+
+        .arm-right {
+            width: 17px;
+            height: 60px;
+            background: #DFBAB4;
+            border-radius: 20px;
+
+            z-index: 1;
+            position: absolute;
+            left: 80px;
+            top: 100px;
+
+            transform: rotate(50deg);
+        }
+
+        .leg-right {
+            width: 23px;
+            height: 60px;
+            background: #D49991;
+            border-radius: 20px;
+
+            z-index: -2;
+            position: absolute;
+            left: 90px;
+            top: 160px;
+
+            transform: rotate(130deg);
+        }
+
+        .leg-left {
+            width: 23px;
+            height: 60px;
+            background: #945953;
+            border-radius: 20px;
+
+            z-index: -3;
+            position: absolute;
+            left: 104px;
+            top: 140px;
+
+            transform: rotate(80deg);
+        }
+
+        .wing-right {
+            background: #ECE2E1;
+
+            height: 55px;
+            width: 110px;
+            border-bottom-left-radius: 90px;
+            border-bottom-right-radius: 90px;
+
+            transform: rotate(-30deg);
+
+            z-index: -4;
+            position: absolute;
+            left: 80px;
+            top: 60px;
+
+            overflow: hidden;
+        }
+
+        .wing-left {
+            background: #CBBFC1;
+
+            height: 55px;
+            width: 110px;
+            border-bottom-left-radius: 90px;
+            border-bottom-right-radius: 90px;
+
+            transform: rotate(-60deg);
+
+            z-index: -5;
+            position: absolute;
+            left: 40px;
+            top: 50px;
+
+            overflow: hidden;
+        }
+
+        .wing-left .in-wing {
+            background: #948683;
+        }
+
+        .in-wing {
+            background: #B2A4A3;
+
+            height: 40px;
+            width: 80px;
+            border-bottom-left-radius: 90px;
+            border-bottom-right-radius: 90px;
+        }
+
+        .bow {
+            width: 41px;
+            height: 80px;
+            border: 11px solid #3A4E59;
+            border-color: #3A4E59 transparent #3A4E59 #3A4E59;
+
+            border-bottom-left-radius: 90px;
+            border-top-left-radius: 90px;
+
+            position: absolute;
+            left: -85px;
+            top: 100px;
+            z-index: 2;
+        }
+
+        .bow:before {
+            width: 20px;
+            height: 11px;
+            background: #3A4E59;
+            border-radius: 0 50px 50px 0;
+
+            position: absolute;
+            content: "\00a0";
+            left: 40px;
+            top: -11px;
+        }
+
+        .bow:after {
+            width: 20px;
+            height: 11px;
+            background: #3A4E59;
+            border-radius: 0 50px 50px 0;
+
+            position: absolute;
+            content: "\00a0";
+            left: 40px;
+            top: 80px;
+        }
+
+        .line-bow {
+            width: 2px;
+            height: 100px;
+            background: #674136;
+
+            position: absolute;
+            left: -22px;
+            top: 101px;
+            z-index: 1;
+        }
+
+        .line-bow2 {
+            width: 150px;
+            height: 2px;
+            background: #674136;
+
+            position: absolute;
+            content: "\00a0";
+            left: -130px;
+            top: 150px;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            left: -140px;
+            top: 140px;
+            z-index: 2;
+        }
+
+        .fa-heart {
+            color: #F88081;
+            font-size: 20px;
+        }
+
+        .fa-heart:after {
+            content: "\f004";
+            color: #C56163;
+            font-size: 8px;
+
+            position: absolute;
+            left: 6px;
+            top: 6px;
+        }
+
+        .tail {
+            width: 30px;
+            height: 14px;
+            background: #B65B58;
+            clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+
+            position: absolute;
+            top: 144px;
+            left: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="cloud">
+            <div class="cloud-one"></div>
+            <div class="cloud-two"></div>
+            <div class="cloud-three"></div>
+            <div class="cloud-four"></div>
+        </div>
+        <div class="cloud two">
+            <div class="cloud-one"></div>
+            <div class="cloud-two"></div>
+            <div class="cloud-three"></div>
+            <div class="cloud-four"></div>
+        </div>
+
+        <div class="cupid">
+
+            <div class="heart">
+                <i class="fa fa-heart"></i>
+            </div>
+            <div class="bow"></div>
+            <div class="line-bow"></div>
+            <div class="line-bow2"></div>
+            <div class="tail"></div>
+
+            <div class="heaven-ring"></div>
+
+            <div class="face">
+                <div class="eye"></div>
+                <div class="nose"></div>
+                <div class="cheek"></div>
+                <div class="teeth"></div>
+                <div class="mouth"></div>
+            </div>
+
+            <div class="cupid-body">
+                <div class="shirt-line"></div>
+                <div class="shirt">
+                    <div class="shirt-shadow"></div>
+                </div>
+            </div>
+            <div class="arm-left"></div>
+            <div class="arm-right"></div>
+            <div class="leg-right"></div>
+            <div class="leg-left"></div>
+
+            <div class="wing-right">
+                <div class="in-wing"></div>
+            </div>
+            <div class="wing-left">
+                <div class="in-wing"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <h1>April 29
+        <sup>th</sup> :)
+    </h1>
+    <p>I have received more love, caring and consideration from you in 12 months than I have from most people that I've known
+        my entire life. Loving you is being 10 years old again, scaling a tree with my eyes bright and skyward, wanting only
+        to get higher and higher, without a thought of how I would get back down. Your love-intense, yet playful, innocent
+        and pure-fills me with peace, contentment and tranquility. It is always just enough. I can only hope that the love
+        I have for you can give the love that you have given me a smidgen of justice. I will spend the rest of my life trying
+        to make sure that it does.
+        <br><br> You are the finest, loveliest, tenderest and most beautiful person I have ever known-and even that is an <strong>understatement.</strong></p>
+</body>
+
+</html>

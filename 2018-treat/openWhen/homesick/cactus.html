@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cactus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Anton');
+        body {
+            background-color: #89c98e;
+        }
+
+        #container {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+        }
+
+        #cactus {
+            position: absolute;
+            left: 1em;
+            top: 2em;
+            animation-name: c-bounce;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 0;
+            timing-function: ease-out;
+        }
+
+        .body {
+            display: block;
+            width: 13em;
+            height: 20em;
+            background-color: #579951;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+
+        .mouth {
+            position: absolute;
+            top: 4em;
+            left: 5em;
+            width: 4em;
+            height: 1.5em;
+            background-color: #000000;
+            border-radius: 40% 40% 30% 30% / 50% 50% 40% 40%;
+            transform: rotate(180deg);
+            animation: spicy 2s infinite ease;
+        }
+
+        #cheeks {
+            width: 2em;
+            height: 1em;
+            background: #FFC0CB;
+            -moz-border-radius: 100px / 50px;
+            -webkit-border-radius: 100px / 50px;
+            border-radius: 100px / 50px;
+            top: 3.5em;
+            position: absolute;
+        }
+
+        .cheekl {
+            left: 2.5em;
+        }
+
+        .cheekr {
+            left: 9.5em;
+        }
+
+        #eyes {
+            width: 1.25em;
+            height: 1.25em;
+            background: #000;
+            border-radius: 0.9em;
+            position: absolute;
+            top: 2.5em;
+        }
+
+        .eyel {
+            left: 3.5em;
+        }
+
+        .eyer {
+            left: 9em;
+        }
+
+        #spikes {
+            position: absolute;
+            top: 0em;
+        }
+
+        #spike {
+            width: 0;
+            height: 0;
+            border-left: 0.5em solid transparent;
+            border-right: 0.5em solid transparent;
+            border-bottom: 1em solid #345B30;
+        }
+
+        .spike1 {
+            position: absolute;
+            left: 1.8em;
+            top: 2em;
+            transform: rotate(-45deg);
+        }
+
+        .spike2 {
+            position: absolute;
+            left: 1em;
+            top: 8em;
+            transform: rotate(-20deg);
+        }
+
+        .spike3 {
+            position: absolute;
+            left: 5em;
+            top: 9em;
+            transform: rotate(15deg);
+        }
+
+        .spike4 {
+            position: absolute;
+            left: 12em;
+            top: 10em;
+            transform: rotate(19deg);
+        }
+
+        .spike5 {
+            position: absolute;
+            left: 9em;
+            top: 9em;
+            transform: rotate(-80deg);
+        }
+
+        .spike6 {
+            position: absolute;
+            left: 4em;
+            top: 5.5em;
+            transform: rotate(-60deg);
+        }
+
+        .spike7 {
+            position: absolute;
+            left: 6.4em;
+            top: -0.8em;
+            transform: rotate(15deg);
+        }
+
+        .spike8 {
+            position: absolute;
+            left: 11em;
+            top: 4.5em;
+            transform: rotate(25deg);
+        }
+
+        .petal {
+            display: block;
+            width: 1.25em;
+            height: 2em;
+            background-color: #F6546A;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+        }
+
+        .petal2 {
+            display: block;
+            width: 1.25em;
+            height: 2em;
+            background-color: green;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            transform: rotate(35deg);
+            left: 0.5em;
+        }
+
+        .petal3 {
+            display: block;
+            width: 1.25em;
+            height: 2em;
+            background-color: teal;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            transform: rotate(-35deg);
+            left: -0.5em;
+        }
+
+        .petal4 {
+            width: 1.25em;
+            height: 2em;
+            background-color: teal;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            transform: rotate(-35deg);
+            top: -1em;
+            left: -0.6em;
+        }
+
+        .petal5 {
+            display: block;
+            width: 1.25em;
+            height: 2em;
+            background-color: green;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            transform: rotate(35deg);
+            top: -1em;
+            left: 0.4em;
+        }
+
+        .petal6 {
+            display: block;
+            width: 1.25em;
+            height: 2em;
+            background-color: #F6546A;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            top: -1em;
+            left: -0.1em;
+        }
+
+        #flower1 {
+            position: absolute;
+            top: -0.5em;
+            left: 3em;
+            transform: rotate(-25deg);
+
+        }
+
+        #flower2 {
+            position: absolute;
+            top: 6em;
+            left: 12.5em;
+            transform: rotate(48deg);
+
+        }
+
+        #flower3 {
+            position: absolute;
+            top: 11em;
+            left: 3em;
+            transform: rotate(-10deg);
+
+        }
+
+        #pot {
+            position: absolute;
+            top: 15em;
+        }
+
+        .pottop {
+            width: 15em;
+            height: 3em;
+            background: #814407;
+            position: absolute;
+        }
+
+        .pot {
+            border-bottom: 10em solid #743D06;
+            border-left: 2em solid transparent;
+            border-right: 2em solid transparent;
+            height: 0;
+            width: 11em;
+            transform: rotate(180deg);
+            position: absolute;
+        }
+
+        /* ANIMATIONS */
+
+        @-webkit-keyframes c-bounce {
+            from {
+                height: 20em;
+                /*transform: rotate(2deg);*/
+                top: 2em;
+            }
+            to {
+                height: 15em;
+                /*transform: rotate(-2deg);*/
+                top: 2.5em;
+            }
+        }
+
+        @-webkit-keyframes spicy {
+            from {
+                height: 1.25em;
+            }
+            to {
+                height: 2em;
+            }
+        }
+
+        .text {
+            padding: 18%;
+            line-height: 8px;
+            font-family: 'Anton',sans-serif;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <h1>If you were a cactus</h1>
+        <h3>I'd endure the pain</h3>
+        <h1>Just to hug you</h1>
+    </div>
+    <div id="container">
+
+        <div id="cactus">
+            <div class="body"></div>
+
+            <div id="face">
+                <div class="mouth"></div>
+                <div id="cheeks" class="cheekl"></div>
+                <div id="cheeks" class="cheekr"></div>
+            </div>
+
+            <div id="spikes">
+                <div id="spike" class="spike1"></div>
+                <div id="spike" class="spike2"></div>
+                <div id="spike" class="spike3"></div>
+                <div id="spike" class="spike4"></div>
+                <div id="spike" class="spike5"></div>
+                <div id="spike" class="spike6"></div>
+                <div id="spike" class="spike7"></div>
+                <div id="spike" class="spike8"></div>
+            </div>
+
+            <div id="eyes" class="eyel"></div>
+            <div id="eyes" class="eyer"></div>
+
+            <div id="flower1">
+                <div id="petals" class="petal"></div>
+                <div id="petals" class="petal2"></div>
+                <div id="petals" class="petal3"></div>
+            </div>
+
+            <div id="flower2">
+                <div id="petals" class="petal"></div>
+                <div id="petals" class="petal2"></div>
+                <div id="petals" class="petal3"></div>
+            </div>
+
+            <div id="flower3">
+                <div id="petals" class="petal6"></div>
+                <div id="petals" class="petal4"></div>
+                <div id="petals" class="petal5"></div>
+            </div>
+
+        </div>
+
+        <div id="pot">
+            <div class="pot"></div>
+            <div class="pottop"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
