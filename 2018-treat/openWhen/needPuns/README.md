@@ -10,5 +10,7 @@ Click only one per day okay. There aren't many here. Look forward to more next y
 - [You Light me up](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/needPuns/lightMeUp.html)
 - [Wife](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/needPuns/wife.html)
 - [Umberella](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/needPuns/umberella.html)
+- [Math Dance](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/needPuns/math.html)
+
 
 Go Back to [Home Page](https://steffinrayen.github.io/fuzzy-happiness/)
