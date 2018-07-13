@@ -7,6 +7,7 @@ Click only one per day okay. There aren't many here. Look forward to more next y
 - [Help them to kiss :)](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/helpKiss.html)
 - [Pet the Cat](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/clingyCat.html)
 - [Stork](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/stork.html)
+- [Chicken](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/chick.html)
 - [Umbrella](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/umberella.html)
 - [Pineapple](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/pineapple.html)
 - [Virtual Hugs](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/ghost.html)
