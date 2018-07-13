@@ -9,7 +9,5 @@ Click only one per day okay. There aren't many here. Look forward to more next y
 - [Happy Dog](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/dog.html)
 - [Virtual Hugs](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/ghost.html)
 - [Stork](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/stork.html)
-- [Chicken](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/chick.html)
-- [Pineapple](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/pineapple.html)
 
 Go Back to [Home Page](https://steffinrayen.github.io/fuzzy-happiness/)
