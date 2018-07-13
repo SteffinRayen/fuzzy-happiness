@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cowboy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #FE8352;
+        }
+
+        body p {
+            font-family: "proxima-nova", sans-serif;
+            z-index: 100;
+            background-color: aliceblue;
+            color: black;
+
+        }
+
+        #foreSVG {
+            z-index: 10;
+            transform: scale(1.02);
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            animation-name: blur;
+            animation-duration: 5s;
+            animation-delay: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #svgBG {
+            z-index: 1;
+            transform: scale(1.2);
+            height: 100vh;
+            position: absolute;
+            right: 0;
+            animation-name: blur;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            overflow: visible !important;
+        }
+
+        #foreground_grad,
+        #foreground_grad_clip {
+            transform: scale(2, 1);
+            transform-origin: right bottom;
+        }
+
+        #handMain_two,
+        #fingerOne_two,
+        #fingerTwo_two,
+        #manTwo,
+        #manThree {
+            visibility: hidden;
+        }
+
+        @keyframes blur {
+            0% {
+                filter: blur(0px);
+            }
+            33% {
+                filter: blur(0px);
+            }
+            100% {
+                filter: blur(5px);
+            }
+        }
+
+        #Foreground {
+            animation-name: moveLeft;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveLeft {
+            0% {
+                transform: translate(0px);
+            }
+            33% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translate(-50px);
+            }
+        }
+
+        #manGroup {
+            animation-name: moveRight_manGroup;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight_manGroup {
+            0% {
+                transform: translate(1026px, 231px);
+            }
+            33% {
+                transform: translate(1026px, 231px);
+            }
+            100% {
+                transform: translate(1046px, 231px);
+            }
+        }
+
+        #landOne {
+            animation-name: moveRight_01;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight_01 {
+            0% {
+                transform: translate(0px);
+            }
+            33% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translate(40px);
+            }
+        }
+
+        #landTwo {
+            animation-name: moveRight_02;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight_02 {
+            0% {
+                transform: translate(0px);
+            }
+            33% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translate(60px);
+            }
+        }
+
+        #landThree {
+            animation-name: moveRight_03;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight_03 {
+            0% {
+                transform: translate(0px);
+            }
+            33% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translate(80px);
+            }
+        }
+
+        #clouds {
+            animation-name: moveRight_Clouds;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight_Clouds {
+            0% {
+                transform: translate(368px, 126px);
+            }
+            33% {
+                transform: translate(368px, 126px);
+            }
+            100% {
+                transform: translate(468px, 126px);
+            }
+        }
+
+        #sun {
+            animation-name: moveRight_Sun;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight_Sun {
+            0% {
+                transform: translate(0px);
+            }
+            33% {
+                transform: translate(0px);
+            }
+            100% {
+                transform: translate(120px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <svg id="svgBG" version="1.1" viewbox="0 0 1814 643" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <lineargradient id="linearGradient-1" x1="50%" x2="50%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#CE952B" stop-opacity="0"></stop>
+                    <stop offset="100%" stop-color="#CE952B"></stop>
+                </lineargradient>
+                <rect height="438" id="path-2" width="3328" x="-1515" y="0"></rect>
+                <radialgradient cx="50%" cy="50%" fx="50%" fy="50%" id="radialGradient-3" r="51.7074986%">
+                    <stop offset="0%" stop-color="#F4AD39"></stop>
+                    <stop offset="77.0727041%" stop-color="#F3A833"></stop>
+                    <stop offset="86.0012755%" stop-color="#F19A21"></stop>
+                    <stop offset="94.7504783%" stop-color="#F17C21"></stop>
+                    <stop offset="100%" stop-color="#F4C139"></stop>
+                </radialgradient>
+                <lineargradient id="linearGradient-4" x1="50%" x2="50%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#320116"></stop>
+                    <stop offset="100%" stop-color="#320116"></stop>
+                </lineargradient>
+                <polygon id="path-5" points="144.099883 0 163.281911 0 163.281911 8.2768217 173.257661 8.2768217 173.257661 9.93135152 163.281911 12.2098365 163.281911 20.1038347 160.247642 25.4413723 160.247642 29.9061437 176.332303 29.9061437 185.90004 39.2740352 193.640092 72.6823288 204.177447 81.3273868 210.249326 88.9169766 235.87735 94.4759384 239.372597 105.792971 248.823057 121.866361 240.680043 115.408956 239.372597 112.173219 232.257535 113.642744 226.716852 105.792971 200.993967 113.642744 184.879127 120.541439 194.238344 156.196364 200.993967 203.085707 221.13348 211.063896 206.945475 211.585941 193.678804 211.585941 193.678804 204.885755 192.18385 189.810401 183.009831 168.096986 183.009831 160.19541 165.926343 120.541439 154.469904 117.705882 157.440082 119.157403 156.984612 164.376135 159.268747 179.790618 160.268747 206.91662 162.247642 211.585941 148.400203 211.585941 152.994422 206.91662 146.596623 179.790618 147.400203 165.715083 135.972538 115.408956 127.373994 103.093463 126 88.9169766 125 72.6823288 126.373994 69.0486838 128.729842 41.794876 129.943825 36.4416465 144.099883 32.9949258 146.400203 29.9061437 146.400203 24.1009305 144.099883 18.5274806 144.099883 12.2325901 134.972538 10.4717414 134.972538 9.00688442 144.286476 9.00688442"></polygon>
+                <filter filterunits="objectBoundingBox" height="100.9%" id="filter-6" width="101.6%" x="-0.8%" y="-0.5%">
+                    <feoffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-7" points="144.099883 0 163.281911 0 163.281911 8.2768217 173.257661 8.2768217 173.257661 9.93135152 163.281911 12.2098365 163.281911 20.1038347 160.247642 25.4413723 160.247642 29.9061437 176.332303 29.9061437 185.90004 39.2740352 193.640092 72.6823288 204.177447 81.3273868 210.249326 88.9169766 232.770881 95.3688216 251.669792 99.7675173 267.506106 122.615831 249.729587 110.473142 238.339085 107.905273 218.403603 112.723404 192.728952 120.541439 184.879127 120.541439 194.238344 156.196364 200.993967 203.085707 221.13348 211.063896 206.945475 211.585941 193.678804 211.585941 193.678804 204.885755 192.18385 189.810401 183.009831 168.096986 183.009831 160.19541 165.926343 120.541439 154.469904 117.705882 157.440082 119.157403 156.984612 164.376135 159.268747 179.790618 160.268747 206.91662 162.247642 211.585941 148.400203 211.585941 152.994422 206.91662 146.596623 179.790618 147.400203 165.715083 135.972538 115.408956 127.373994 103.093463 126 88.9169766 125 72.6823288 126.373994 69.0486838 128.729842 41.794876 129.943825 36.4416465 144.099883 32.9949258 146.400203 29.9061437 146.400203 24.1009305 144.099883 18.5274806 144.099883 12.2325901 134.972538 10.4717414 134.972538 9.00688442 144.286476 9.00688442"></polygon>
+                <filter filterunits="objectBoundingBox" height="100.9%" id="filter-8" width="101.4%" x="-0.7%" y="-0.5%">
+                    <feoffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-9" points="146.099883 0 165.281911 0 165.281911 8.2768217 175.257661 8.2768217 175.257661 9.93135152 165.281911 12.2098365 165.281911 20.1038347 162.247642 25.4413723 162.247642 29.9061437 178.332303 29.9061437 187.90004 39.2740352 195.640092 72.6823288 205.177447 81.3273868 205.177447 90.5885213 223.489648 103.093463 248.62974 110.238451 261 107.337243 256.510413 112.723404 238.031347 117.705882 211.249326 112.723404 193.728952 120.541439 185.879127 120.541439 195.238344 156.196364 200.993967 203.085707 221.13348 211.063896 206.945475 211.585941 193.678804 211.585941 193.678804 204.885755 192.18385 189.810401 184.009831 168.096986 184.009831 160.19541 166.926343 120.541439 155.469904 117.705882 158.440082 119.157403 157.984612 164.376135 160.268747 179.790618 160.268747 206.91662 162.247642 211.585941 148.400203 211.585941 152.994422 206.91662 147.596623 179.790618 148.400203 165.715083 136.972538 115.408956 128.373994 103.093463 127 88.9169766 127 72.6823288 128.373994 69.0486838 130.729842 41.794876 131.943825 36.4416465 146.099883 32.9949258 148.400203 29.9061437 148.400203 24.1009305 146.099883 18.5274806 146.099883 12.2325901 136.972538 10.4717414 136.972538 9.00688442 146.286476 9.00688442"></polygon>
+                <polygon id="path-9-reset" points="146.099883 0 165.281911 0 165.281911 8.2768217 175.257661 8.2768217 175.257661 9.93135152 165.281911 12.2098365 165.281911 20.1038347 162.247642 25.4413723 162.247642 29.9061437 178.332303 29.9061437 187.90004 39.2740352 195.640092 72.6823288 205.177447 81.3273868 205.177447 90.5885213 223.489648 103.093463 248.62974 110.238451 261 107.337243 256.510413 112.723404 238.031347 117.705882 211.249326 112.723404 193.728952 120.541439 185.879127 120.541439 195.238344 156.196364 200.993967 203.085707 221.13348 211.063896 206.945475 211.585941 193.678804 211.585941 193.678804 204.885755 192.18385 189.810401 184.009831 168.096986 184.009831 160.19541 166.926343 120.541439 155.469904 117.705882 158.440082 119.157403 157.984612 164.376135 160.268747 179.790618 160.268747 206.91662 162.247642 211.585941 148.400203 211.585941 152.994422 206.91662 147.596623 179.790618 148.400203 165.715083 136.972538 115.408956 128.373994 103.093463 127 88.9169766 127 72.6823288 128.373994 69.0486838 130.729842 41.794876 131.943825 36.4416465 146.099883 32.9949258 148.400203 29.9061437 148.400203 24.1009305 146.099883 18.5274806 146.099883 12.2325901 136.972538 10.4717414 136.972538 9.00688442 146.286476 9.00688442"></polygon>
+                <filter filterunits="objectBoundingBox" height="100.9%" id="filter-10" width="101.5%" x="-0.7%" y="-0.5%">
+                    <feoffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <lineargradient id="linearGradient-11" x1="50%" x2="50%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#793C5D" stop-opacity="0"></stop>
+                    <stop offset="100%" stop-color="#793C5D"></stop>
+                </lineargradient>
+            </defs>
+            <g fill="none" fill-rule="evenodd" id="Page-2" stroke="none" stroke-width="1">
+                <g id="BG">
+                    <g id="sky">
+                        <use fill="#FE796C" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    </g>
+                    <circle cx="1282.5" cy="389.5" fill="url(#radialGradient-3)" id="sun" r="263.5"></circle>
+                    <g fill="#FFFFFF" id="clouds" transform="translate(368.000000, 126.000000)">
+                        <g id="Group-13" opacity="0.249773551" transform="translate(1136.500000, 69.500000) scale(-1, 1) translate(-1136.500000, -69.500000) translate(947.000000, 24.000000)">
+                            <path d="M273.588298,80.4375 C319.696405,80.4375 356.476174,71.8717374 355.337707,66.3827108 C347.477223,28.4840118 313.86322,0 273.588298,0 C234.202969,0 201.187556,27.2395987 192.397245,63.8853763 C190.896806,70.140533 227.480192,80.4375 273.588298,80.4375 Z"
+                                id="Oval-11"></path>
+                            <rect height="39" id="Rectangle" rx="19.5" width="379" x="0" y="52"></rect>
+                        </g>
+                        <g id="Group-13-Copy" opacity="0.249773551" transform="translate(1174.500000, 45.500000) scale(-1, 1) translate(-1174.500000, -45.500000) translate(985.000000, 0.000000)">
+                            <path d="M273.588298,80.4375 C319.696405,80.4375 356.476174,71.8717374 355.337707,66.3827108 C347.477223,28.4840118 313.86322,0 273.588298,0 C234.202969,0 201.187556,27.2395987 192.397245,63.8853763 C190.896806,70.140533 227.480192,80.4375 273.588298,80.4375 Z"
+                                id="Oval-11"></path>
+                            <rect height="39" id="Rectangle" rx="19.5" width="379" x="0" y="52"></rect>
+                        </g>
+                        <g id="Group-13" opacity="0.141757246" transform="translate(108.000000, 10.000000)">
+                            <path d="M342.333333,100.806937 C399.925587,100.806937 445.866094,90.0720398 444.444069,83.19301 C434.625775,35.6971062 392.639531,0 342.333333,0 C293.138299,0 251.899735,34.1375666 240.920022,80.0632678 C239.045868,87.9024372 284.74108,100.806937 342.333333,100.806937 Z"
+                                id="Oval-11"></path>
+                            <rect height="48.5555556" id="Rectangle" rx="24.2777778" width="474" x="0" y="65.4444444"></rect>
+                        </g>
+                        <rect height="33" id="Rectangle" opacity="0.141757246" rx="16.5" width="242" x="370" y="115"></rect>
+                        <rect height="33" id="Rectangle-Copy-8" opacity="0.141757246" rx="16.5" width="351" x="116" y="139"></rect>
+                        <rect height="51" id="Rectangle-Copy-9" opacity="0.141757246" rx="25.5" width="351" x="68" y="99"></rect>
+                    </g>
+                    <polygon fill="#CF3848" id="landThree" points="-362 374 -248.5 314 -174.5 294 161.5 294 340.5 264 612.496677 285.892797 676 254 926 294 1248.5 294 1304.5 274 1457 294 1642.39703 287.91349 1687.5 264 1813 284 1813 571 -362 571"></polygon>
+                    <path d="M-790.579015,515.925319 L-655.113103,396.712382 L-566.517241,339.227429 L-164.244138,339.227429 L50.062069,253 L133.852209,269.190976 C146.387056,293.807594 160.191258,307.572253 175.264813,310.484953 C190.338368,313.397653 257.152679,315.211109 375.707746,315.925319 L428.223911,303.198894 L444.221324,253.466604 L527.778885,253.466604 L565.201762,303.198894 L751.046897,339.227429 L1137.15724,339.227429 L1204.20276,281.742476 L1386.78207,339.227429 L1608.74706,321.733292 L1662.74621,253 L1813,310.484953 L1813,571 L-791,571 L-790.579015,315.925319 Z"
+                        fill="#793C5D" id="landTwo" transform="translate(511.000000, 412.000000) scale(-1, 1) translate(-511.000000, -412.000000) "></path>
+                    <polygon fill="#FE8352" id="landOne" points="-1701 356.321839 -1517.57356 420.965517 -1397.98276 388.643678 -854.975862 388.643678 -565.695402 340.16092 -126.123761 375.541692 -23.4965517 324 378 356.321839 901.716092 388.643678 992.217241 356.321839 1238.67126 388.643678 1538.28991 378.807318 1611.18046 340.16092 1814 372.482759 1814 643 -1701 643"></polygon>
+                    <g id="manGroup" transform="translate(1026.000000, 231.000000)">
+                        <polygon fill="url(#linearGradient-4)" id="manShadow_Left" points="148.775574 211 161.571283 211 111.571283 341.98546 0.648025203 340"></polygon>
+                        <polygon fill="url(#linearGradient-4)" id="manShadow_Right" points="193.775574 211 219.936224 211 298.079758 340 165.386858 341.98546"></polygon>
+                        <g id="manThree">
+                            <use fill="#320116" fill-rule="evenodd" xlink:href="#path-5"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                        </g>
+                        <g id="manTwo">
+                            <use fill="#320116" fill-rule="evenodd" xlink:href="#path-7"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                        </g>
+                        <g id="manOne">
+                            <use fill="#320116" fill-rule="evenodd" xlink:href="#path-9"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                        </g>
+                    </g>
+                    <rect fill="url(#linearGradient-11)" height="172" id="foreground_grad" width="1814" x="0" y="401"></rect>
+                    <rect fill="#793C5D" height="70" id="foreground_grad_clip" width="1814" x="0" y="573"></rect>
+                </g>
+                <g id="ref" transform="translate(1453.000000, -11989.000000)"></g>
+            </g>
+        </svg>
+        <svg id="foreSVG" version="1.1" viewbox="0 0 1814 643" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <polygon id="path-10" points="282 306.706483 345.850067 396.380113 357.194065 452.499807 337.036186 481.062609 344.635814 504.517764 352.187433 517.713717 393.411327 462.570195 393.411327 376.818756 345.850067 289"></polygon>
+                <filter filterunits="objectBoundingBox" height="101.7%" id="filter-2" width="103.6%" x="-1.8%" y="-0.9%">
+                    <feoffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-30" points="337.500467 315.42695 409.444699 416.468355 446.298566 480.529857 441.241709 538.812517 472.518586 560.716872 487.513114 483.576711 463.03522 394.427238 409.444699 295.475846"></polygon>
+                <filter filterunits="objectBoundingBox" height="101.5%" id="filter-4" width="102.7%" x="-1.3%" y="-0.8%">
+                    <feoffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-50" points="108.409545 222.165341 50.8052602 83.1798782 0.690181296 5.14250501 245.333758 0.760441595 285.715159 127.53491 357.122181 255.500323 405.160742 307.928582 471.553453 392.862216 478.236178 432.269521 440.871117 534.185051 440.871117 590.682867 421.343965 582.898296 399.203289 560.599829 392.160742 514.271092 405.160742 435.038958 357.122181 366.994827 229.924011 317.757687 214.254415 403.209678 248.814695 463.844839 239.46318 504.972005 214.254415 510.772616 172.993668 427.530488 108.409545 353.291336"></polygon>
+                <filter filterunits="objectBoundingBox" height="100.7%" id="filter-6" width="100.8%" x="-0.4%" y="-0.3%">
+                    <feoffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-70" points="282 306.706483 345.850067 396.380113 364.067685 449.814602 358.049358 490.431655 365.648986 513.88681 373.200605 527.082763 410.844562 460.969558 393.411327 376.818756 345.850067 289"></polygon>
+                <filter filterunits="objectBoundingBox" height="101.7%" id="filter-8" width="103.1%" x="-1.6%" y="-0.8%">
+                    <feoffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-90" points="337.833296 315.860429 409.777529 416.901833 430.304564 477.110122 421.893804 531.493906 440.595248 564.173438 483.011266 489.679173 463.36805 394.860717 409.777529 295.909325"></polygon>
+                <filter filterunits="objectBoundingBox" height="101.5%" id="filter-10" width="102.8%" x="-1.4%" y="-0.7%">
+                    <feoffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+                <polygon id="path-11" points="108.409545 222.165341 50.8052602 83.1798782 0.690181296 5.14250501 245.333758 0.760441595 285.715159 127.53491 357.122181 255.500323 405.160742 307.928582 471.553453 392.862216 478.236178 432.269521 453.871117 534.185051 450.871117 592.270469 434.343965 582.898296 412.203289 560.599829 405.160742 514.271092 405.160742 435.038958 357.122181 366.994827 229.924011 317.757687 198.493775 421.770619 213.586701 467.343315 198.493775 505.412739 179.02642 514.271092 156.306872 428.622365 108.409545 353.291336"></polygon>
+                <filter filterunits="objectBoundingBox" height="100.7%" id="filter-12" width="100.8%" x="-0.4%" y="-0.3%">
+                    <feoffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
+                    <fecomposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"></fecomposite>
+                    <fecolormatrix in="shadowInnerInner1" type="matrix" values="0 0 0 0 0.901960784   0 0 0 0 0.850980392   0 0 0 0 0.674509804  0 0 0 1 0"></fecolormatrix>
+                </filter>
+            </defs>
+            <g fill="none" fill-rule="evenodd" id="Page-2" stroke="none" stroke-width="1">
+                <g id="Foreground">
+                    <g id="Hand" transform="translate(568.000000, -171.000000)">
+                        <g id="fingerTwo_two">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-10"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-10"></use>
+                        </g>
+                        <g id="fingerOne_two" transform="translate(412.506790, 428.096359) rotate(-11.000000) translate(-412.506790, -428.096359) ">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-30"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-30"></use>
+                        </g>
+                        <g id="handMain_two">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-50"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-50"></use>
+                        </g>
+                        <g id="fingerTwo_one">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-70"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-70"></use>
+                        </g>
+                        <g id="fingerOne_one" transform="translate(410.422281, 430.041381) rotate(-11.000000) translate(-410.422281, -430.041381) ">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-90"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-90"></use>
+                        </g>
+                        <g id="handMain_one">
+                            <use fill="#000000" fill-rule="evenodd" xlink:href="#path-11"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                        </g>
+                    </g>
+                    <g id="Gun" transform="translate(-387.000000, -244.000000)">
+                        <polygon fill="#000000" id="Path-32" points="926.737375 175.228383 932.505424 185.653697 948.489677 232.437122 950.940429 306.755955 955.099179 329.374802 964.512407 340.317032 972.681021 356.75296 972.681021 369.903375 981.292945 373.950042 967.956842 381.80583 950.940429 443.424249 943.442635 455.863695 930.548168 458.200692 806.675641 837.699155 793.168905 982.037549 0.701634473 1082.01068 20.7867512 24 890.157837 0.216608774"></polygon>
+                        <polygon fill="#E6D9AC" id="Path-26" points="918.792873 446.541646 938.190045 462.056448 794.254509 873.72142 778.943812 865.824524 901.479318 536.050567 888.626672 526.3975 882.939674 505.863809 901.479318 452.507635 888.626672 415.824807 899.454435 385.003713 893.870223 381.651424 922.385975 287.779975 918.792873 274.486818 922.385975 263.986502 953.041143 307.040589 954.916252 329.309894 942.866805 329.309894 901.479318 405.950016 899.454435 414.048079 904.457173 444.923502"></polygon>
+                        <polygon fill="#E6D9AC" id="Path-27" points="937.576001 412.689162 948.235992 425.548624 950.286547 441.344229 968.910232 388.910095 968.910232 370.604009 956.692557 353.995298"></polygon>
+                        <polygon fill="#E6D9AC" id="Path-28" points="768.979498 825.127276 764.372611 835.042622 752.135317 830.084949 757.849272 817.549969 752.135317 814.534494 853.171438 570.137786 857.195827 570.137786 853.171438 563.833287 861.189642 544.622102 857.195827 530.712941 842.503028 506.611666 853.171438 492.226208 865.489188 497.718106 865.489188 492.226208 861.189642 490.089308 881.277792 445.047054 886.821182 450.577571 870.95695 497.718106 868.609256 497.718106 868.609256 501.122987 870.95695 509.99241 870.95695 528.74017 881.277792 539.112504 865.489188 577.266151 861.189642 577.266151 780.211097 795.743288 772.394033 792.430127 764.372611 814.534494"></polygon>
+                        <polygon fill="#E6D9AC" id="Path-29" points="891.600422 350.489813 897.20971 327.855883 881.62964 318.228495 874.840464 297.397965 877.813718 274.476201 884.769575 262.394123 895.034365 263.997658 898.749197 269.273584 901.500981 282.024703 905.110094 263.997658 895.034365 260.28437 885.863036 257.117425 877.813718 262.394123 872.570975 272.976841 869.116968 297.397965 877.813718 323.10238 890.324847 334.951413"></polygon>
+                        <polygon fill="#E6D9AC" id="Path-30" points="879.921928 276.380689 887.590811 277.81137 896.058374 291.496984 891.527884 307.507648 887.990151 288.030631 879.921928 279.456576"></polygon>
+                        <polygon fill="#E6D9AC" id="Path-31" points="924.894386 261.692016 949.485805 296.516627 946.767635 229.886938 933.335558 186.948981 899.269505 156.563996 896.075032 162.711851 933.335558 211.882927 933.335558 241.307953"></polygon>
+                    </g>
+                </g>
+                <g id="ref" transform="translate(1453.000000, -11180.000000)"></g>
+            </g>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="100">
+                Make it totally clear that this gun
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="130">
+                has a right end and a wrong end.
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="160">
+                Make it totally clear to anyone
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="190">
+                standing at the wrong end that
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="220">
+                things are going badly for them.
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="250">
+                If that means sticking all sort
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="280">
+                of spikes and prongs and blackened
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="310">
+                bits all over it then so be it.
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="340">
+                This is not a gun for hanging
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="370">
+                over the fireplace or sticking in the 
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="400">
+                umbrella stand, it is a gun for going 
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="430">
+                out and making people miserable with.
+            </text>
+            <text fill="#ffffff" font-size="18" font-family="Gloria Hallelujah" x="50" y="460">
+
+            </text>
+
+
+        </svg>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/findShapeIndex.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        var tl = new TimelineMax({ paused: false, repeat: -1, yoyo: true, repeatDelay: 0, delay: 0 });
+        var tl2 = new TimelineMax({ paused: false, repeat: -1, yoyo: true, repeatDelay: 1, delay: 0 });
+        var tl3 = new TimelineMax({ paused: false, repeat: -1, yoyo: true, repeatDelay: 1, delay: 0 });
+        var tl4 = new TimelineMax({ paused: false, repeat: -1, yoyo: true, repeatDelay: 1, delay: 0 });
+    </script>
+</body>
+
+</html>

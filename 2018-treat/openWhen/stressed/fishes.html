@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fishes in Pond</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lilita+One);
+
+        * {
+            user-select: none;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-color: #1d3f59;
+            backface-visibility: hidden;
+        }
+
+        h1 {
+            position: absolute;
+            top: calc(50% - 125px);
+            left: 0;
+            right: 0;
+            margin: 0;
+            padding: 0 20px;
+            color: #1d3f59;
+            font: 250px/1 'Lilita One', sans-serif;
+            white-space: nowrap;
+            text-align: right;
+            text-shadow: 0 0 80px rgba(255, 255, 255, 0.3);
+        }
+
+        .pond {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .fish {
+            position: absolute;
+            margin: -15px 0 0 -30px;
+            opacity: 0;
+            transition: transform 10s;
+            animation: spawn .5s forwards;
+        }
+
+        @keyframes spawn {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fish-bob {
+            position: relative;
+            margin-top: -20px;
+            animation: bob 6s infinite;
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(40px);
+            }
+        }
+
+        .fish-direction {
+            position: relative;
+            transition: transform .5s;
+        }
+
+        .fish-body {
+            position: relative;
+            margin-left: 10px;
+            width: 50px;
+            height: 30px;
+            border-radius: 50%;
+            border-bottom: solid 1px rgba(0, 0, 0, .2);
+            transition: transform 2s ease-out;
+        }
+
+        .fish-body::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -10px;
+            width: 0;
+            height: 0;
+            border-left: solid 25px orange;
+            border-top: solid 15px transparent;
+            border-bottom: solid 15px transparent;
+        }
+
+        .fish-body::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 34px;
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .fish-1 .fish-body {
+            background-color: #d49919;
+        }
+
+        .fish-1 .fish-body::before {
+            border-left-color: #d49919;
+        }
+
+        .fish-2 .fish-body {
+            background-color: #74a135;
+        }
+
+        .fish-2 .fish-body::before {
+            border-left-color: #74a135;
+        }
+
+        .fish-3 .fish-body {
+            background-color: #806fad;
+        }
+
+        .fish-3 .fish-body::before {
+            border-left-color: #806fad;
+        }
+
+        .fish-4 .fish-body {
+            background-color: #d97eb6;
+        }
+
+        .fish-4 .fish-body::before {
+            border-left-color: #d97eb6;
+        }
+
+        .fish-flip .fish-direction {
+            transform: scaleX(-1);
+        }
+
+        .fish-spin .fish-body {
+            transform: rotate(720deg);
+        }
+
+        .bubble {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border: solid 1px #fff;
+            border-radius: 50%;
+            margin: -15px 0 0 20px;
+            transform-origin: center top;
+            animation: bubble 4s linear forwards;
+        }
+
+        @keyframes bubble {
+            100% {
+                transform: translateY(-200px) rotate(-1080deg);
+                opacity: 0;
+            }
+        }
+
+        .bubble-flip {
+            margin-left: -28px;
+            animation-name: bubble-flip;
+        }
+
+        @keyframes bubble-flip {
+            100% {
+                transform: translateY(-200px) rotate(1080deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <span class="count">0</span> FISH</h1>
+    <div class="pond"></div>
+    <script>
+        var STARTING_FISH_COUNT = 20;
+
+        // globals
+        var $count, $pond, pondWidth, pondHeight;
+
+        // on document ready
+        $(function () {
+            // setup
+            $count = $('.count');
+            $pond = $('.pond');
+            determinePondSize();
+
+            // events
+            $(window).on('resize', determinePondSize);
+            $pond.on('click', stirPond);
+
+            // fill the pond
+            spawnStartingFish();
+        });
+
+        function determinePondSize() {
+            pondWidth = $pond.width();
+            pondHeight = $pond.height();
+        }
+
+        function spawnStartingFish() {
+            for (var i = 0; i < STARTING_FISH_COUNT; i++) {
+                spawnFish(getRandom(pondWidth), getRandom(pondHeight));
+            }
+        }
+
+        function stirPond(event) {
+            spawnFish(event.clientX, event.clientY);
+        }
+
+        function spawnFish(x, y) {
+            // setup fish
+            var $fish = $('<div class="fish"><div class="fish-bob"><div class="fish-direction"><div class="fish-body"></div></div></div></div>');
+            var colors = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4];
+            $fish.addClass('fish-' + colors[Math.floor(getRandom(15))]);
+            if (getRandom(2) < 1) {
+                $fish.addClass('fish-flip');
+            }
+            $fish.find('.fish-bob').css('animation-delay', '-' + getRandom(7) + 's');
+            $fish.find('.fish-body').on('click', pokeFish.bind(this, $fish));
+            positionFish($fish, x, y);
+
+            // let fish go
+            $pond.append($fish);
+            setTimeout(doFishyThings.bind(this, $fish), getRandom(10000))
+            $count.text($('.fish').length);
+        }
+
+        function pokeFish($fish) {
+            $fish.toggleClass('fish-spin');
+            return false;
+        }
+
+        function doFishyThings($fish) {
+            blowBubble($fish);
+            moveFish($fish);
+
+            var timeout = $fish.data('timeout');
+            clearTimeout(timeout);
+            timeout = setTimeout(doFishyThings.bind(this, $fish), 10000 + getRandom(6000));
+            $fish.data('timeout', timeout);
+        }
+
+        function blowBubble($fish) {
+            var $bubble = $('<div class="bubble">');
+            if ($fish.hasClass('fish-flip')) {
+                $bubble.addClass('bubble-flip');
+            }
+
+            var x = $fish.data('x');
+            var y = $fish.data('y');
+            $bubble.css({ top: y + 'px', left: x + 'px' });
+
+            $pond.prepend($bubble);
+            setTimeout(popBubble.bind(this, $bubble), 4000);
+        }
+
+        function moveFish($fish) {
+            var x = getRandom(pondWidth);
+            var y = getRandom(pondHeight);
+
+            if (x < $fish.data('x')) {
+                $fish.addClass('fish-flip');
+            } else {
+                $fish.removeClass('fish-flip');
+            }
+            positionFish($fish, x, y);
+        }
+
+        function positionFish($fish, x, y) {
+            $fish
+                .css('transform', 'translate(' + x + 'px, ' + y + 'px)')
+                .data('x', x)
+                .data('y', y);
+        }
+
+        function popBubble($bubble) {
+            $bubble.remove();
+        }
+
+        function getRandom(upper) {
+            return Math.random() * upper;
+        }
+    </script>
+</body>
+
+</html>

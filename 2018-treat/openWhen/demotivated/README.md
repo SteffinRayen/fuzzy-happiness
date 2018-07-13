@@ -7,9 +7,11 @@ Click only one per day okay. There aren't many here. Look forward to more next y
 - [Psalm 41](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/psalm42.html)
 - [Random Quotes](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/randomQuote.html)
 - [Random Quotes v.2](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/chubby.html)
+- [Random Quotes v.3](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/panda.html)
 - [Rabbit Motivation](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/rabbit.html)
 - [Rainbow](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/rainbow.html)
-- [Lazy Cat](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/.html)
-- [Sun](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/.html)
+- [Lazy Cat](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/sleepyCat.html)
+- [Sun](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/sun.html)
+- [Hitchhiker's Guide to Galaxy](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/demotivated/cowboy.html)
 
 Go Back to [Home Page](https://steffinrayen.github.io/fuzzy-happiness/)

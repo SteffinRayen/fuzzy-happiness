@@ -11,5 +11,8 @@ Click only one per day okay. There aren't many here. Look forward to more next y
 - [Tetris](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/tetris.html)
 - [Tic Tac Toe](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/ticTacToe.html)
 - [Tower of Hanoi](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/towerOfHanoi.html)
+- [Solitaire](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/solitaire.html)
+- [Math Dance](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/math.html)
+- [Sun and Moon](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/bored/sunRise.html)
 
 Go Back to [Home Page](https://steffinrayen.github.io/fuzzy-happiness/)

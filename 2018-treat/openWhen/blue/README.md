@@ -10,5 +10,6 @@ Click only one per day okay. There aren't many here. Look forward to more next y
 - [Umbrella](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/umberella.html)
 - [Pineapple](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/pineapple.html)
 - [Virtual Hugs](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/ghost.html)
+- [Chemistry](https://steffinrayen.github.io/fuzzy-happiness/2018-treat/openWhen/blue/chemistry.html)
 
 Go Back to [Home Page](https://steffinrayen.github.io/fuzzy-happiness/)
