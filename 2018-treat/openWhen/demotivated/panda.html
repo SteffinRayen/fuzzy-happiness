@@ -7,8 +7,11 @@
     <title>Panda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Gaegu');
         body {
             background: #ddd;
+            font-family: "Gaegu" cursive;
+            
         }
 
         .panda {
@@ -158,9 +161,30 @@
                 transform: rotateY(0deg) rotateX(36deg);
             }
         }
+        #content {
+            height: 40em;
+        }
+
+        p {
+            max-width: 50em;
+            color: black;
+            font-family: 'Gaegu', cursive;
+            letter-spacing: 0.1em;
+            text-align: center;
+            margin: 40px auto;
+            text-transform: lowercase;
+            line-height: 145%;
+            font-size: 2em;
+            font-variant: small-caps;
+        }
+
+        p :hover {
+            text-decoration: none;
+        }
+
 
         .container {
-            padding-top: 6em;
+            padding-top: 3em;
             text-align: center;
         }
 
@@ -227,8 +251,7 @@
     </div>
     <div class="container">
         <div id="content">
-            <p id="quote">"the people who are crazy enough to think they can change the world are the ones who do."
-                <br/>- Steve Jobs</p>
+            <p id="quote">I am not fat, I am just fluffy</p>
         </div>
         <button id="gen" onclick="genQuote()">New Quote</button>
     </div>
