@@ -26,9 +26,9 @@
             height: 300px;
             width: 800px;
             margin: 0px auto;
-            position: absolute;
-            bottom: 5em;
-            left: 30%;
+            position: relative;
+            bottom: 3px;
+            margin-bottom: 20px;
         }
 
         .ribbon_right {
@@ -145,6 +145,7 @@
             background: #fff;
             bottom: -25px;
             position: absolute;
+            
         }
 
         .cake {
@@ -909,20 +910,158 @@
             top: -10px;
         }
 
+        /* Candle */
+
+        .two_number {
+            position: absolute;
+            left: 147px;
+            top: 25px;
+            width: 9px;
+
+        }
+
+        .two_number:after {
+            content: "";
+            height: 5px;
+            width: 10px;
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            right: 5px;
+            box-shadow: 0px 10px 0 0px #c6c6c6,
+            5px 20px 0 0px #c6c6c6;
+
+        }
+
+        .two_number:before {
+            content: "";
+            height: 15px;
+            width: 5px;
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            right: 0px;
+            box-shadow: -10px 10px 0 0px #c6c6c6;
+        }
+
+        .five_number {
+            position: absolute;
+            right: 147px;
+            top: 25px;
+            width: 14px;
+        }
+
+        .five_number:after {
+            content: "";
+            height: 5px;
+            width: 15px;
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            right: 0px;
+            box-shadow: 0px 10px 0 0px #c6c6c6,
+            0px 20px 0 0px #c6c6c6;
+
+        }
+
+        .five_number:before {
+            content: "";
+            height: 15px;
+            width: 5px;
+            position: absolute;
+            background: #c6c6c600;
+            top: 0px;
+            right: 0px;
+            box-shadow: 0px 10px 0 0px #c6c6c6,
+            -10px 0px 0 0px #c6c6c6;
+        }
+
+        .five_flame {
+            height: 12px;
+            width: 6px;
+            border-radius: 100%;
+            background: #ffd215;
+            position: absolute;
+            right: 5px;
+            -webkit-animation: flame 0.5s infinite linear;
+            animation: flame 0.5s infinite linear;
+            -moz-animation: flame 0.5s infinite linear;
+            bottom: 0px;
+        }
+
+        .two_flame {
+            height: 12px;
+            width: 6px;
+            border-radius: 100%;
+            background: #ffd215;
+            position: absolute;
+            right: 5px;
+            bottom: 0px;
+            -webkit-animation: flame 0.5s infinite linear;
+            animation: flame 0.5s infinite linear;
+            -moz-animation: flame 0.5s infinite linear;
+        }
+
+        @-webkit-keyframes flame {
+            0% {
+                height: 12px;
+                background: #fdd214;
+            }
+            50% {
+                height: 14px;
+                background: #ffc617;
+            }
+            100% {
+                height: 12px;
+                background: #fdd214;
+            }
+        }
+
+        @keyframes flame {
+            0% {
+                height: 12px;
+                background: #fdd214;
+            }
+            50% {
+                height: 14px;
+                background: #ffc617;
+            }
+            100% {
+                height: 12px;
+                background: #fdd214;
+            }
+        }
+
+        @-moz-keyframes flame {
+            0% {
+                height: 12px;
+                background: #fdd214;
+            }
+            50% {
+                height: 14px;
+                background: #ffc617;
+            }
+            100% {
+                height: 12px;
+                background: #fdd214;
+            }
+        }
+
+        /* Code */
+
         @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
         .code {
             background-color: #272822;
-            padding: 2em;
+            padding: 50px;
             color: white;
-            border-radius: 0.5em;
+            border-radius: 1em;
             font-family: Source Code Pro, monospace;
-            width: 50%;
-            height: auto;
-            font-size: 1.5em;
-            position: absolute;
-            top: 7em;
-            left: 23%;
+            font-size: 24px;
+            width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-x: auto;
         }
 
         .class {
@@ -959,139 +1098,14 @@
         }
 
         /* Heading */
+
         .happybday {
             font-family: Pacifico;
             text-align: center;
-            padding-top: 60px;
+            padding: 60px;
             text-shadow: 1px 1px #D15162;
             font-size: 3em;
         }
-        /* Candle */
-        .two_number {
-            position: absolute;
-            left: 147px;
-            top: 25px;
-            width: 9px;
-            
-        }
-        .two_number:after {
-            content: "";
-            height: 5px;
-            width: 10px;
-            position: absolute;
-            background: #c6c6c6;
-            top: 0px;
-            right: 5px;
-            box-shadow: 0px 10px 0  0px #c6c6c6,
-                        5px 20px 0  0px #c6c6c6;
-				
-        }
-        .two_number:before {
-            content: "";
-            height: 15px;
-            width: 5px;
-            position: absolute;
-            background: #c6c6c6;
-            top: 0px;
-            right: 0px;
-            box-shadow: -10px 10px 0  0px #c6c6c6;
-        }
-        .five_number {
-            position: absolute;
-            right: 147px;
-            top: 25px;
-            width: 14px;
-        }
-        .five_number:after {
-            content: "";
-            height: 5px;
-            width: 15px;
-            position: absolute;
-            background: #c6c6c6;
-            top: 0px;
-            right: 0px;
-            box-shadow: 0px 10px 0  0px #c6c6c6,
-                        0px 20px 0  0px #c6c6c6;
-			
-        }
-        .five_number:before {
-            content: "";
-            height: 15px;
-            width: 5px;
-            position: absolute;
-            background: #c6c6c600;
-            top: 0px;
-            right: 0px;
-            box-shadow: 0px 10px 0  0px #c6c6c6,
-                        -10px 0px 0  0px #c6c6c6;
-        } 
-        .five_flame {
-            height: 12px;
-            width: 6px;
-            border-radius: 100%;
-            background: #ffd215;
-            position: absolute;
-            right: 5px;
-            -webkit-animation: flame 0.5s infinite linear;
-            animation: flame 0.5s infinite linear;
-            -moz-animation: flame 0.5s infinite linear;
-            bottom: 0px;
-        }
-        .two_flame {
-            height: 12px;
-            width: 6px;
-            border-radius: 100%;
-            background: #ffd215;
-            position: absolute;
-            right: 5px;
-            bottom: 0px;
-            -webkit-animation: flame 0.5s infinite linear;
-            animation: flame 0.5s infinite linear;
-            -moz-animation: flame 0.5s infinite linear;
-        }
-        @-webkit-keyframes flame {
-            0% {
-                height: 12px;
-                background: #fdd214;
-            }
-            50% {
-                height: 14px;
-                background: #ffc617;
-            }
-            100% {
-                height: 12px;
-                background: #fdd214;
-            }
-        }
-        @keyframes flame {
-            0% {
-                height: 12px;
-                background: #fdd214;
-            }
-            50% {
-                height: 14px;
-                background: #ffc617;
-            }
-            100% {
-                height: 12px;
-                background: #fdd214;
-            }
-        }
-        @-moz-keyframes flame {
-            0% {
-                height: 12px;
-                background: #fdd214;
-            }
-            50% {
-                height: 14px;
-                background: #ffc617;
-            }
-            100% {
-                height: 12px;
-                background: #fdd214;
-            }
-        }
-
     </style>
 </head>
 
